@@ -1,4 +1,4 @@
-package org.sol.book.chap03;
+package org.sol.book.example;
 
 public class MemberService {
 
