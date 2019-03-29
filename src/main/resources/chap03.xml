@@ -12,7 +12,7 @@
 	<!-- dependency injection by constructor -->
 	<bean id="memberRegisterService"
 		class="org.sol.book.chap03.MemberRegisterService">
-		<constructor-arg ref="memberDao" />
+		<property name="memberDao" ref="memberDao" />
 	</bean>
 
 	<!-- dependency injection by setter -->
