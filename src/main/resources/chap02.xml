@@ -9,4 +9,15 @@
 
 	<bean id="greeter" class="org.sol.jdbc.spring.Greeter" />
 
+	<bean id="memberDao" class="org.sol.book.chap03.MemberDao" />
+
+	<bean id="articleService"
+		class="org.sol.book.chap03.ArticleService">
+		<property name="memberDao" ref="memberDao" />
+	</bean>
+
+	<bean id="memberService"
+		class="org.jacob.sol.chap03.MemberService">
+		<property name="memberDao" ref="memberDao" />
+	</bean>
 </beans>
