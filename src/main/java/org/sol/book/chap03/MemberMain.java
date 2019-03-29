@@ -13,8 +13,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MemberMain {
 
 	public static void main(String[] args) {
-		MemberDao memberDao = new MemberDao();
-		MemberRegisterService regService = new MemberRegisterService(memberDao);
+		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("chap03.xml");
+		MemberRegisterService regService = ctx.getBean("memberRegisterService", org.sol.book.chap03.MemberRegisterService.class);
+		
 
 		// registerRequest 초기화
 		RegisterRequest req = new RegisterRequest();
@@ -24,5 +25,6 @@ public class MemberMain {
 
 		// 회원 등록
 		regService.regist(req);
+		ctx.close();
 	}
 }
