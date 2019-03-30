@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -10,16 +11,16 @@
 	<bean id="memberDao" class="org.sol.book.chap03.MemberDao" />
 
 	<!-- dependency injection by constructor -->
+	<!-- 
 	<bean id="memberRegisterService"
 		class="org.sol.book.chap03.MemberRegisterService">
-		<property name="memberDao" ref="memberDao" />
+		<constructor-arg ref="memberDao" />
 	</bean>
+	-->
 
-	<!-- dependency injection by setter -->
-	<!-- 
+	<!-- dependency injection by setter --> 
 	<bean id="memberRegisterService"
 		class="org.sol.book.chap03.MemberRegisterService">
 		<property name="memberDao" ref="memberDao"/>
 	</bean>
-	-->
 </beans>

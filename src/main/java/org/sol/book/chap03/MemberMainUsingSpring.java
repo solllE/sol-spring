@@ -12,18 +12,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MemberMainUsingSpring {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext(
-				"chap03.xml");
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("chap03.xml");
 		MemberRegisterService regService = ctx.getBean("memberRegisterService",
 				MemberRegisterService.class);
 
 		// registerRequest 초기화
 		RegisterRequest req = new RegisterRequest();
-		req.setEmail("jacob@irafe.com");
-		req.setPassword("xxxx");
-		req.setName("Jacob");
+		req.setEmail("qufrhdwn1111@naver.com");
+		req.setPassword("958401");
+		req.setName("solE");
 
 		// 회원 등록
-		regService.regist(req);
+		regService.regist(req); 
 	}
 }
