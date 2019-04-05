@@ -1,4 +1,4 @@
-package org.sol.jdbc.spring;
+package org.sol.book.chap02;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,4 +1,4 @@
-package org.sol.jdbc.spring;
+package org.sol.book.chap02;
 
 public class NormalMain {
 	public static void main(String[] args) {
