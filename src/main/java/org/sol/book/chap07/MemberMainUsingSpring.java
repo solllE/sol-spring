@@ -16,7 +16,7 @@ public class MemberMainUsingSpring {
 	 */
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext(
-				"chap08.xml");
+				"chap07.xml");
 		MemberService memberService = ctx.getBean(MemberService.class);
 		memberService.insertMember();
 		memberService.selectAll();

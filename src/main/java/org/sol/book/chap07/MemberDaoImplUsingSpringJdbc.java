@@ -3,6 +3,7 @@ package org.sol.book.chap07;
 import java.util.List;
 
 import org.sol.book.chap03.Member;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -23,16 +24,17 @@ public class MemberDaoImplUsingSpringJdbc implements MemberDao {
 	static final String UPDATE = "UPDATE member SET email=?, password=sha2(?,256), name=? WHERE memberId=?";
 
 	static final String SELECT_ALL = "SELECT memberId, email, name FROM member ORDER BY memberId desc LIMIT ?,?";
-
+	
+@Autowired
 	JdbcTemplate jdbcTemplate;
 
 	/**
 	 * jdbcTemplate setter for injection
 	 */
+	
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
-
 	/**
 	 * p.194의 memberRowMapper<br>
 	 * Member 오브젝트와 member 테이블의 한 행을 매핑하는 rowMapper

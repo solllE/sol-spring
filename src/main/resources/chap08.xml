@@ -24,12 +24,12 @@
 
 	<!-- p.190 [리스트 8.6]. jdbcTemplate을 memberDao에 injection -->
 	<bean id="memberDao"
-		class="org.jacob.book.chap08.MemberDaoImplUsingSpringJdbc">
+		class="org.sol.book.chap08.MemberDaoImplUsingSpringJdbc">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
 
 	<!-- memberDao를 memberService에 injection -->
-	<bean id="memberService" class="org.jacob.book.chap08.MemberService">
+	<bean id="memberService" class="org.sol.book.chap08.MemberService">
 		<property name="memberDao" ref="memberDao" />
 	</bean>
 </beans>
