@@ -18,7 +18,7 @@ public class MemberService {
 
 	Logger logger = LogManager.getLogger();
 	@Autowired
-	MemberDao memberDao = null;
+	MemberDao memberDao;
 
 	/**
 	 * memberDao setter for injection
@@ -41,7 +41,7 @@ public class MemberService {
 
 	public void insertMember() {
 		Member member = new Member();
-		member.setEmail("kimsolE@naver.com");
+		member.setEmail("kimsol@naver.com");
 		member.setPassword("1234567");
 		member.setName("김솔이과제");
 		memberDao.insert(member);
