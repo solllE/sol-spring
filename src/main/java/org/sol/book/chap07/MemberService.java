@@ -41,8 +41,8 @@ public class MemberService {
 
 	public void insertMember() {
 		Member member = new Member();
-		member.setEmail("kimsol@naver.com");
-		member.setPassword("1234567");
+		member.setEmail("solllE@naver.com");
+		member.setPassword("958401");
 		member.setName("김솔이과제");
 		memberDao.insert(member);
 		logger.debug("Insert complete.");
